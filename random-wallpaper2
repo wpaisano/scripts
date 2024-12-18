@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Diretório onde estão os wallpapers
+WALLPAPER_DIR="/home/glover/Imagens/wallpapers/"
+
+# Escolhe uma imagem aleatória
+RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.jpg" -o -name "*.png" -o -name "*.jpeg" \) | shuf -n 1)
+
+# Define o papel de parede com feh
+feh --bg-fill "$RANDOM_WALLPAPER"
+
